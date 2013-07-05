@@ -12,7 +12,7 @@ npm install component-uglifyjs
 
 To enable UglifyJS minification of your scripts, run the following code:
 
-``javascript
+```javascript
 var Builder = require('component-builder');
 var uglify = require('component-uglify');
 var fs = require('fs');
