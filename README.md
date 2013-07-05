@@ -14,7 +14,7 @@ To enable UglifyJS minification of your scripts, run the following code:
 
 ```javascript
 var Builder = require('component-builder');
-var uglify = require('component-uglify');
+var uglify = require('component-uglifyjs');
 var fs = require('fs');
 
 var builder = new Builder(__dirname);
@@ -37,7 +37,7 @@ builder.build(function (error, build) {
 Or from the command line:
 
 ```bash
-component build --use component-uglify
+component build --use component-uglifyjs
 ```
 
 ## License
