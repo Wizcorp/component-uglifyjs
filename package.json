@@ -1,0 +1,15 @@
+{
+  "name": "component-uglifyjs",
+  "version": "0.1.0",
+  "description": "UglifyJS plugin for component-builder",
+  "main": "index.js",
+  "dependencies": {
+    "uglify-js": "~2.3.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Wizcorp/component-uglifyjs"
+  },
+  "author": "Ron Korving <rkorving@wizcorp.jp>",
+  "license": "MIT"
+}
