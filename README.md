@@ -21,6 +21,9 @@ var builder = new Builder(__dirname);
 
 builder.use(uglify);
 
+// or if you want to pass options to uglify:
+builder.use(uglify.withOptions({ mangle: false }));
+
 builder.build(function (error, build) {
     if (error) {
 		throw error;
