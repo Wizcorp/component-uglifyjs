@@ -8,7 +8,7 @@ function jsFilter(fileName) {
 }
 
 
-exports = module.exports = function (builder) {
+function plugin(builder, options) {
 	// set up the hook for scripts
 
 	builder.hook('before scripts', function (builder) {
@@ -21,7 +21,7 @@ exports = module.exports = function (builder) {
 		files.forEach(function (file) {
 			var path = builder.path(file);
 
-			result = uglify.minify(path);
+			result = uglify.minify(path, options);
 
 			if (result) {
 				builder.removeFile('scripts', file);
@@ -29,5 +29,15 @@ exports = module.exports = function (builder) {
 			}
 		});
 	});
+}
+
+
+plugin.withOptions = function (options) {
+	return function (builder) {
+		plugin(builder, options);
+	};
 };
+
+
+module.exports = plugin;
 

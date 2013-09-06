@@ -1,10 +1,10 @@
 {
   "name": "component-uglifyjs",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "UglifyJS plugin for component-builder",
   "main": "index.js",
   "dependencies": {
-    "uglify-js": "~2.3.6"
+    "uglify-js": "~2.4.0"
   },
   "repository": {
     "type": "git",
