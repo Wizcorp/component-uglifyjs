@@ -1,5 +1,9 @@
 # Changes
 
+## v0.3.0
+
+* Added support for sourcemaps.
+
 ## v0.2.0
 
 * Exposed a `withOptions(options)` function to allow users to pass custom
