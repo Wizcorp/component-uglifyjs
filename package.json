@@ -1,6 +1,6 @@
 {
   "name": "component-uglifyjs",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "UglifyJS plugin for component-builder",
   "main": "index.js",
   "dependencies": {
