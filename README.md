@@ -22,7 +22,7 @@ var builder = new Builder(__dirname);
 builder.use(uglify);
 
 // or if you want to pass options to uglify:
-builder.use(uglify.withOptions({ mangle: false }));
+builder.use(uglify.withOptions({ mangle: false, outSourceMap: true }));
 
 builder.build(function (error, build) {
     if (error) {
@@ -33,6 +33,12 @@ builder.build(function (error, build) {
 
     if (build.css) {
 		fs.writeFileSync('build/build.css', build.css);
+	}
+
+	// NOTE: sourcemaps are stored on the builder, not the build!
+
+	if (builder.sourcemaps) {
+	    fs.writeFileSync('build/sourcemaps.json', JSON.stringify(builder.sourcemaps));
 	}
 });
 ```
